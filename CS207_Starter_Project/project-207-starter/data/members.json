@@ -4,19 +4,16 @@
             "name": "รวีโรจน์ โพธิพีรนันท์",
             "student_id": "1680706023",
             "role": "Statistics.py",
-            "image": "data/imgs/yong.jpg"
         },
         {
             "name": "รัชฏะ เรือนเงิน",
             "student_id": "1680704960",
             "role": "Bayes.py",
-            "image": "data/imgs/Ton.jpg"
         },
         {
             "name": "เปรม แก่นประโคน",
             "student_id": "1680706007",
             "role": "Markov.py",
-            "image": "data/imgs/prem.jpg"
         }
     ]
 }
