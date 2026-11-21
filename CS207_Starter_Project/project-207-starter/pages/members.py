@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import streamlit as st
 
-# กำหนด Path ไฟล์ data/members.json
+# กำหนด Path โฟลเดอร์หลักของโปรเจกต์
 path = Path(__file__).resolve().parent.parent
 object_path = path / "data" / "members.json"
 
@@ -38,8 +38,12 @@ else:
 
         with col1:
             if image_url and image_url != "N/A":
-                # แสดงผลรูปภาพด้วย st.image
-                st.image(image_url, width=120)
+                # แปลง Path รูปภาพให้อ้างอิงจากโฟลเดอร์โปรเจกต์เสมอ
+                img_path = path / image_url
+                if img_path.exists():
+                    st.image(str(img_path), width=120)
+                else:
+                    st.warning(f"ไม่พบรูป: {image_url}")
             else:
                 st.info("No Image")
 
